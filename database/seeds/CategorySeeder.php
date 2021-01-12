@@ -45,6 +45,14 @@ class CategorySeeder extends Seeder
             'name' => 'Dog Food',
             'parent_id' => 2
         ]);
+        DB::table('category')->insert([
+            'name' => 'Puppy Food',
+            'parent_id' => 8
+        ]);
+        DB::table('category')->insert([
+            'name' => 'Adult Dog Food',
+            'parent_id' => 8
+        ]);
 
     }
 }

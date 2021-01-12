@@ -13,7 +13,7 @@ class Category extends Model
         'parent_id'
     ];
 
-    public function subCategory() {
+    public function subCategories() {
         return $this->hasMany('App\Category', 'parent_id');
     }
 }
