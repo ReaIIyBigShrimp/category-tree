@@ -1,8 +1,7 @@
 @foreach($subCategories as $subcategory)
     <ul>
-        <li><a href="/category/{{ $category->id }}">{{$subcategory->name}}</a></li>
+        <li class="list-group"><a class="list-group-item list-group-item-action" href="/category/{{ $category->id }}">{{$subcategory->name}}</a></li>
         @if(count($subcategory->subcategory))
-            {{ $subcategory->name }}
             @include('category.sub_category_list',['subCategories' => $subcategory->subcategory])
         @endif
     </ul>
